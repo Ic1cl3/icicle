@@ -10,6 +10,12 @@
             margin-left: 20px;
             margin-right: 20px;
         }
+        a {
+            color : cyan;
+        }
+        a:visited {
+            color : cyan
+        }
         div.box {
             border-style: solid;
             border-width: 4px;
@@ -24,7 +30,10 @@
             color: cyan;
             font-family: monospace;
             font-size: large;
-            padding-top: 20px;
+            margin-top: 5px;
+            margin-bottom: 5px;
+            padding-top: 10px;
+            padding-bottom: 10px;
             text-decoration: underline;
             cursor: pointer;
         }
@@ -42,13 +51,11 @@
                 </div>
 
                 <div class="box">
-                    <button>> Here's another one!</button><br>
-                    <button>> How fun!</button>
-                    <p ><a href="c://users/user/downloads/icicle dot dev/random.html">> Yipee!</a></p>
+                    <a href="otherRandom.html" target="right">> This is a link</a>
                 </div>
             </div>
-            <div class="box" style="float: right; width: 50%">
-                <p>> This box is on the Right side!</p>
+            <div class="box" style="float: right; width: 45%">
+                <iframe id="right" name="right" src="random.html" style="border: none; margin-top: 10px; margin-left: -20px;"></iframe>
             </div>
         </div>
     </body>
