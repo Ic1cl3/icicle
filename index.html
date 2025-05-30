@@ -24,19 +24,6 @@
             padding-right: 20px;
             margin-bottom: 20px;
         }
-        button {
-            border: none;
-            background: none;
-            color: cyan;
-            font-family: monospace;
-            font-size: large;
-            margin-top: 5px;
-            margin-bottom: 5px;
-            padding-top: 10px;
-            padding-bottom: 10px;
-            text-decoration: underline;
-            cursor: pointer;
-        }
     </style>
 </head>
 
@@ -46,17 +33,25 @@
         <div>
             <div style="float: left; width: 35%;">
                 <div class="box">
-                    <p>> This is my div!</p>
-                    <p>> Fun boxes like these will store all of the "links" which will open up boxes on the other side of the page with content</p>
+                    <p>> Welcome to my website :P</p>
+                    <p>> This is where I put stuff that I do and make, as well as where I ramble about myself via badly formatted div</p>
                 </div>
 
                 <div class="box">
-                    <a href="otherRandom.html" target="right">> This is a link</a>
+                    <p><a href="bio.html" target="right">> Bio</a></p>
                 </div>
             </div>
-            <div class="box" style="float: right; width: 45%">
-                <iframe id="right" name="right" src="random.html" style="border: none; margin-top: 10px; margin-left: -20px;"></iframe>
+            <div class="box" style="float: right; width: 45%; height: auto;">
+                <iframe id="right" name="right" scrolling="no" src="random.html" onload="resizeIFrame(this)" style="margin-top: 10px; margin-left: -20px; width: 100%;"></iframe>
             </div>
         </div>
+
+        <script>
+            function resizeIFrame(frame) {
+                console.log(frame.contentWindow.document)
+            }
+        </script>
     </body>
 </html>
+
+<!-- this.style.height=(this.contentWindow.document.body.scrollHeight+20)+'px';
