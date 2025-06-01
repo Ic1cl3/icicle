@@ -42,15 +42,9 @@
                 </div>
             </div>
             <div class="box" style="float: right; width: 45%; height: auto;">
-                <iframe id="right" name="right" scrolling="no" src="random.html" onload="resizeIFrame(this)" style="margin-top: 10px; margin-left: -20px; width: 100%;"></iframe>
+                <iframe id="right" name="right" scrolling="no" src="random.html" onload="this.style.height=(this.contentWindow.document.body.scrollHeight+20)+'px';" style="margin-top: 10px; margin-left: -20px; width: 100%;"></iframe>
             </div>
         </div>
-
-        <script>
-            function resizeIFrame(frame) {
-                console.log(frame.contentWindow.document)
-            }
-        </script>
     </body>
 </html>
 
